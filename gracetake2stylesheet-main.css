@@ -1,0 +1,206 @@
+/* General Styling */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    margin: 0;
+    
+}
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+/* Menu */
+.menu ul {                                  
+    text-align: center;                    
+    list-style: none;                    
+}
+.menu ul li {                                 
+    font: 'Lato' sans-serif;      
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
+    display: inline-block;             
+    position: relative;                  
+    padding: 15px 20px;           
+    color: #23495c;
+    background-color: #acb1b3;              
+    cursor: pointer;                   
+}
+.menu ul li:hover {                       
+   background: #23495c;              
+    color: #fcfcfc;                         
+}
+.menu ul li ul {                            
+    padding: 0;                       
+    position: absolute;              
+    top: 48px;                        
+    left: -10000px;                  
+    width: 150px;                   
+ }
+.menu ul li ul li {                        
+    background: #23495c;            
+    display: block;                  
+    color: #f7fff7;                     
+}
+.menu ul li ul li:hover { background: #343434; } 
+.menu ul li:hover ul {                 
+   display: block;                 
+    left : 0px;                         
+}
+
+
+/* Logo Header */
+.tagline {
+	text-align: center;
+    font: 'Lato' sans-serif;  
+    font: weight 300px;    
+    font-style: italic;
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+    color: #23495c;
+}
+.logo {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+/* Buckets section */
+
+.buckets {
+	padding: 2em 1em 1em;
+	background: #23495c;
+}
+
+.buckets ul {
+	margin: 0;
+	padding: 0;
+}
+
+.buckets li {
+	margin-bottom: 1em;
+	background: white;
+	list-style-type: none;
+}
+
+.bucket {
+	padding: 1.5em;
+}
+
+.bucket-title {
+    text-align: center;
+    font: 'Lato' sans-serif;      
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+}
+.btn {
+    display: block;
+	border: 0;
+	width: 100%;
+    text-align: center;
+	height: auto;
+    font: 'Lato' sans-serif; 
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 5px; 
+    color: #23495c;
+    background-color: #acb1b3;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-block-end: 10px;
+}
+@media screen and (min-width: 700px) {
+	@supports (display: flex) {
+
+		.buckets ul {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.buckets li {
+			width: 31%;
+		}
+
+	}
+}
+/* Bio Section */
+.bio {
+	padding-bottom: 2em;
+    background-color: #acb1b3; 
+}
+.content-title {
+    text-align: center;
+    font: 'Lato' sans-serif;  
+    font: weight 300px;    
+    font-style: italic;
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+    color: #23495c;
+}
+
+.bio-content {
+	padding: 1.5em;
+}
+.center-text {
+    text-align: center;
+}
+/* Complete Portfolio Section */
+.center-text {
+    padding: 1.5em;
+}
+/* Footer Section */
+.footer {
+    padding: 2em;
+	background:#23495c;
+	color: white;
+	line-height: 1.5;
+}
+.footer a {
+	color: white;
+}
+.footer-title {
+    font: 'Lato' sans-serif;  
+    font: weight 300px;    
+    font-style: italic;
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+    color: #fcfcfc;
+}
+.footer a:focus {
+	border-bottom: 1px solid white;
+}
+
+/* Responsive styles */
+.site {
+	max-width: 50em;
+	margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+    .site {
+        max-width: none;
+    }
+
+    .main-area > *,
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    .bio-content,
+    .more-content,
+    .buckets ul {
+        grid-column: 2/4;
+    }
+
+    .footer aside {
+        grid-column: 2 span;
+    }
+}
